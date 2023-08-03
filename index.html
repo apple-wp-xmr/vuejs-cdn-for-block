@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Random User Generator</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div id="app">
+            <Transition mode="out-in" enter-to-class="myclass">
+                <p v-if="number == 1">hello1</p>
+                <p v-if="number == 2">hello2</p>
+                <p v-if="number == 3">hello3</p>
+            </Transition>
+            <button v-on:click="showHello(1)">Show hello 1</button>
+            <button v-on:click="showHello(2)">Show hello 2</button>
+            <button v-on:click="showHello(3)">Show hello 3</button>
+        </div>
+        <script src="https://unpkg.com/vue@next"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
