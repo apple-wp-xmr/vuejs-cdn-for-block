@@ -8,14 +8,15 @@
     </head>
     <body>
         <div id="app">
-            <Transition mode="out-in" enter-to-class="myclass">
-                <p v-if="number == 1">hello1</p>
-                <p v-if="number == 2">hello2</p>
-                <p v-if="number == 3">hello3</p>
+            <Transition mode="out-in" v-bind:name="'go' + direction">
+                <div class="page-content" v-if="number == 1">hello1</div>
+                <div class="page-content" v-if="number == 2">hello2</div>
+                <div class="page-content" v-if="number == 3">hello3</div>
             </Transition>
-            <button v-on:click="showHello(1)">Show hello 1</button>
-            <button v-on:click="showHello(2)">Show hello 2</button>
-            <button v-on:click="showHello(3)">Show hello 3</button>
+
+            <button v-on:click="showPage(1)">Show hello 1</button>
+            <button v-on:click="showPage(2)">Show hello 2</button>
+            <button v-on:click="showPage(3)">Show hello 3</button>
         </div>
         <script src="https://unpkg.com/vue@next"></script>
         <script src="script.js"></script>

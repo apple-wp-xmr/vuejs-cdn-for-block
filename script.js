@@ -1,18 +1,22 @@
 const app = Vue.createApp({
     data() {
         return {
-            picture: 'https://randomuser.me/api/portraits/men/10.jpg',
             number: 1,
+            direction: 'Right',
         };
     },
     methods: {
-        async getUser() {
-            const res = await fetch('https://randomuser.me/api');
-            const { results } = await res.json();
-            this.picture = results[0].picture.large;
-        },
-        showHello(number) {
+        showPage(number) {
+            if (number == this.number) {
+                return;
+            }
+            if (number > this.number) {
+                direction = 'Right';
+            } else {
+                direction = 'Left';
+            }
             this.number = number;
+            console.log(number, direction);
         },
     },
 });
