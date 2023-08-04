@@ -11,12 +11,11 @@ const app = Vue.createApp({
                 return;
             }
             if (number > this.number) {
-                direction = 'Right';
+                this.direction = 'Right';
             } else {
-                direction = 'Left';
+                this.direction = 'Left';
             }
             this.number = number;
-            console.log(number, direction);
         },
     },
 });

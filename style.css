@@ -41,60 +41,54 @@ button:hover {
     transform: scale(0.98);
 }
 
-.goRight-leave-from {
-    opacity: 1;
-    transform: translateX(0%);
-}
-
-.goRight-leave-active {
-    transition: all 2s ease-out;
-}
-
-.goRight-leave-to {
-    opacity: 0;
-    transform: translateX(-100%);
-}
-
 .goRight-enter-from {
     opacity: 0;
     transform: translateX(100%);
 }
-
 .goRight-enter-active {
-    transition: all 2s ease-out;
+    /* show a transition from right */
+    transition: all 1s ease;
 }
-
 .goRight-enter-to {
     opacity: 1;
     transform: translateX(0%);
 }
 
-/* --- left part ----*/
-
-.goLeft-leave-from {
+.goRight-leave-from {
     opacity: 1;
     transform: translateX(0%);
 }
-
-.goLeft-leave-active {
-    transition: all 2s ease-out;
+.goRight-leave-active {
+    /* show a transition to left */
+    transition: all 1s ease;
 }
-
-.goLeft-leave-to {
+.goRight-leave-to {
     opacity: 0;
-    transform: translateX(100%);
+    transform: translateX(-100%);
 }
 
 .goLeft-enter-from {
     opacity: 0;
     transform: translateX(-100%);
 }
-
 .goLeft-enter-active {
-    transition: all 2s ease-out;
+    /* show a transition from left */
+    transition: all 1s ease;
 }
-
 .goLeft-enter-to {
     opacity: 1;
     transform: translateX(0%);
+}
+
+.goLeft-leave-from {
+    opacity: 1;
+    transform: translateX(0%);
+}
+.goLeft-leave-active {
+    /* show a transition from left */
+    transition: all 1s ease;
+}
+.goLeft-leave-to {
+    opacity: 0;
+    transform: translateX(100%);
 }
